@@ -4,24 +4,23 @@ To use our Code:
 
 - First, add to Matlab path, Code folder + all subfolders
 
-
 To Use Viola Jones Training:
+
 Run TrainingScript with the following parameters:
 
-load features;               -  features to use (you can use FeaturesBuilder to build them again)
-load PosSetMerged;           -  positive training data (you can use prepareBoxScript to build them)
-load NegsStage3;             -  negative training data (you can use prepareBoxScript to build them)
-
-
-MaxFPRate = 0.001;           -  false positive rate for each cascade iteration     
-MinDRate = 0.99;             -  minimal detection rate to reach
-FPTarget = MaxFPRate;        -  overall false positive rate
-DecFeatRate = 0.0;           -  how many features to ignore (in percentage) (these will not be used at all during training)
-SCThreshDecRate = 0.05;      -  how fast to lower detection rate to reach
-
-logLevel = 2;                -  which log prints to log
-ChunkSizeMB = 200;           -  how to split data - how big one chunk of data should be (according to your computer memory limitations)
-FeatureValuesPath = 'C:\M.Sc\CV\matlab\Data\TempFeatureValuesChunks';      -  folder path to save temp data during training
+| Parameter         | Description                                                  | Default Value |
+| :---------------- | ------------------------------------------------------------ | ------------- |
+| load features     | Features to use (you can use FeaturesBuilder to build them again) |               |
+| load PosSetMerged | positive training data (you can use prepareBoxScript to build them) |               |
+| load NegsStage3   | negative training data (you can use prepareBoxScript to build them) |               |
+| MaxFPRate         | false positive rate for each cascade iteration               | 0.001         |
+| MinDRate          | minimal detection rate to reach                              | 0.99          |
+| FPTarget          | overall false positive rate                                  | MaxFPRate     |
+| DecFeatRate       | how many features to ignore (in percentage) (these will not be used at all during training) | 0.0           |
+| SCThreshDecRate   | how fast to lower detection rate to reach                    | 0.05          |
+| logLevel          | which log prints to log                                      | 2             |
+| ChunkSizeMB       | how to split data - how big one chunk of data should be (according to your computer memory limitations) | 200           |
+| FeatureValuesPath | folder path to save temp data during training                |               |
 
 
 
