@@ -1,10 +1,10 @@
 # Robust-real-time-face-detection---training-and-classification
 
-To use our Code:
+#### To use our Code
 
-- First, add to Matlab path, Code folder + all subfolders
+First, add to Matlab path, Code folder + all subfolders
 
-To Use Viola Jones Training:
+#### To Use Viola Jones Training
 
 Run TrainingScript with the following parameters:
 
@@ -24,24 +24,25 @@ Run TrainingScript with the following parameters:
 
 
 
-To Use Viola Jones Testing:
+#### To Use Viola Jones Testing
+
 Run TestBenchmark with the following parameters:
 
-
-input_dir_name = 'C:\M.Sc\CV\matlab\Data\CMU_Test\test';                        -  path of folder with test images
-output_dir_name = 'C:\M.Sc\CV\matlab\Data\BenchmarkResults\SC_1_2_3_WGPrePro';  -  path of folder to house results
-SlideSize = 19;              -  detector size
-SingleStep = -1;             -  how many/which scales to use (-1 all scales, 0 base scale, 1 scale wich is one enlargement, 2 scale which means 2 enlargements)
-EnlargeFactor = 1.25;        -  how much to enalrge the detector size in each scale
-deltaX = 1;                  -  how many sub-windows to skip in X axis
-deltaY = 1;                  -  how many sub-windows to skip in X axis
-maxHeight = 288;             -  maximal input image height (deprecated)
-maxWidth = 384;              -  maximal input image width (deprecated)
-maxMemMB = 200;              -  maximal chunk of data at once to operate on (according to your computer limitations)
-EnablePre = 0;               -  enable preprocessing on each subwindow of image (boolean)
-EnablePreGlobal = 1;         -  enable preprocesing globaly on image (boolean)
-EnablePP = 0;                -  enable postprocessing (for better false alarm rate)
-rejectDist = 1;              -  how many false alrams to reject according to distance from other false alarm windows
-minFacesBunch = 2;           -  how many faces windows should be together in order to be considered a good detection so not reject it.
-
-load SC_1_2_3;               -  load result of training (the classifier)
+| parameter       | description                                                  | default value |
+| --------------- | ------------------------------------------------------------ | ------------- |
+| input_dir_name  | path of folder with test images                              |               |
+| output_dir_name | path of folder to house results                              |               |
+| SlideSize       | detector size                                                | 19            |
+| SingleStep      | how many/which scales to use (-1 all scales, 0 base scale, 1 scale wich is one enlargement, 2 scale which means 2 enlargements) | -1            |
+| EnlargeFactor   | how much to enalrge the detector size in each scale          | 1.25          |
+| deltaX          | how many sub-windows to skip in X axis                       | 1             |
+| deltaY          | how many sub-windows to skip in X axis                       | 1             |
+| maxHeight       | maximal input image height (deprecated)                      | 288           |
+| maxWidth        | maximal input image width (deprecated)                       | 384           |
+| maxMemMB        | maximal chunk of data at once to operate on (according to your computer limitations) | 200           |
+| EnablePre       | enable preprocessing on each subwindow of image (boolean)    | 0             |
+| EnablePreGlobal | enable preprocesing globaly on image (boolean)               | 1             |
+| EnablePP        | enable postprocessing (for better false alarm rate)          | 0             |
+| rejectDist      | how many false alrams to reject according to distance from other false alarm windows | 1             |
+| minFacesBunch   | how many faces windows should be together in order to be considered a good detection so not reject it |               |
+| load SC_1_2_3   | load result of training (the classifier)                     |               |
