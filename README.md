@@ -1,5 +1,8 @@
 # Robust-real-time-face-detection---training-and-classification
 
+#### About
+Developed from scratch  - a fully vectorized algorithm based on the original paper of Viola&Jones (Supervised learning: Ada-boost and classifier cascading) robust real time face detection - training and classification. Very large amount of skewed class training data, continuous training over several weeks. Detection rates were very close to the ones in the original paper (w/o any code reference);
+
 #### To use our Code
 
 First, add to Matlab path, Code folder + all subfolders
